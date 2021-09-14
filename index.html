@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Compiled and minified Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>NeXtflix</title>
 </head>
 <body>
-    <h1>Group Project</h1>
-    <script src="./assets/js/script.js"></script>
-</body>
-</html>
+  <header>
+  
+  <div class="col s12 m8 offset-m2 l6 offset-l3">
+    <div class="card-panel black z-depth-1">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <img src="images/popcorn.jpeg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+        </div>
+        <div class="col s10">
+          <span class="black-text">
+            <h1>
+            <a href="/" class="deep-purple-text">NeXt</a><a class="white-text">flix</a>
+            </h1>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </header>  
+
+  <div class="container center-align">
+    <section class="card-panel deep-purple lighten-1">
+        <h2 class="white-text">
+        Start plan your next movie night
+        </h2>
+        <h5>
+            Now you can search movies and then look it up to see 
+            ratings, actors, or whatever.
+        </h5>
+    </section>
+  </div>
+
+  <div class="container">
+        <div class="searchBar">
+            <input id="inputMovie" type="text" class="white-text" class="form" placeholder="Search for a movie">
+            <div class="submitBtn">
+              <a class="waves-effect waves-light btn-small deep-purple lighten-1">Search</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

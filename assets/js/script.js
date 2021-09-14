@@ -1,5 +1,5 @@
 fetch(
-    "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand"
+    "https://api.themoviedb.org/3/movie/550?api_key=fcce2b5c2f58b9fb122efde3fc3fca79"
 )
     .then(function(response) {
         return response.json();
