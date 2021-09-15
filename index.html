@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>NeXtflix</title>
 </head>
+
 <body>
+
   <header>
-  
   <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel black z-depth-1">
       <div class="row valign-wrapper">
         <div class="col s2">
-          <img src="images/popcorn.jpeg" alt="neon popcorn sign" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <img src="images/popcorn.jpeg" alt="neon popcorn sign" class="circle responsive-img">
         </div>
         <div class="col s10">
           <span class="black-text">
@@ -29,7 +30,6 @@
       </div>
     </div>
   </div>
-  
   </header>  
 
   <div class="container center-align">
@@ -38,25 +38,29 @@
         Start planning your next movie night
         </h2>
         <h5>
-            Now you can search movies and then look it up to see 
-            ratings, actors, or whatever.
+            Now you can search movies and see ratings, actors, and a trailer.
         </h5>
     </section>
   </div>
 
+  <!-- Search Bar  -->
   <div class="container">
-        <div class="searchBar">
-            <input id="inputMovie" type="text" class="white-text" class="form" placeholder="Search for a movie">
-            <div class="submitBtn">
+        <form class="submitBtn">
+            <input class="inputValue" type="text" placeholder="Search for a movie" style="color: white">
+            <div class="searchBar">
               <a class="waves-effect waves-light btn-small deep-purple lighten-1">Search</a>
-                </button>
             </div>
-        </div>
+          </form>
+          <div class="col-sm-8">
+            <div class="row">
+              <h3 class="movieName" style="color:white">Title: </h3>
+              <p style="color:white">Rating: <span class="rating"></span></p>
+              <p style="color:white">Release Date: <span class="release"></span></p>
+              <p style="color:white">Overview: <span class="overview"></span></p>
+            </div>
+          </div>
     </div>
 
-    <div class="">
-        <img src="images/IMDb-Logo-Square.svg" alt="imdb logo" class="imbd">
-    </div>
 
     <div class="container">
         <div class="searchBar">

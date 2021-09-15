@@ -1,34 +1,32 @@
-fetch(
-    "https://api.themoviedb.org/3/search/movie?api_key=fcce2b5c2f58b9fb122efde3fc3fca79&query=the+croods"
-)
+var inputValue = document.querySelector('.inputValue')
+var key = 'fcce2b5c2f58b9fb122efde3fc3fca79'
+var movieName = document.querySelector('.movieName')
+var rating = document.querySelector('.rating')
+var overview = document.querySelector('.overview')
+var release = document.querySelector('.release')
+
+function getMovie(event) {
+  event.preventDefault();
+  var search = inputValue.value
+  fetch('https://api.themoviedb.org/3/search/movie?api_key=' + key + '&query=' + search + '')
+    
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
         console.log(data);
-        //path to movie id
-        var movieId = data.results[0].id;
-        console.log(movieId);
-        //results for more information including path to YouTube Trailer
-        return fetch(
-            "https://api.themoviedb.org/3/movie/" + movieId + "?api_key=fcce2b5c2f58b9fb122efde3fc3fca79&append_to_response=videos"
-        )
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(infoObject) {
-                    console.log(infoObject);
 
-                    var posterPath = infoObject.poster_path;
-                    var titlePath = infoObject.title;
-                    var overviewPath = infoObject.overview;
-                    
-
-                    var posterDivEl = document.querySelector("#poster");
-                    // posterDivEl.innerHTML = "";
-                    var moviePoster = document.createElement("img");
-                    moviePoster.setAttribute('src', 'https://image.tmdb.org/t/p/w300/' + posterPath);
-                    posterDivEl.appendChild(moviePoster);
-                });
+        var name = data.results[0].title
+        movieName.innerHTML = name
+        var ratingScore = data.results[0].vote_average
+        rating.innerHTML = ratingScore
+        var overviewEl = data.results[0].overview
+        overview.innerHTML = overviewEl
+        var releaseDateEl = data.results[0].release_date
+        release.innerHTML = releaseDateEl
     });
 
+  
+  }
+
+document.querySelector('.submitBtn').addEventListener('submit', getMovie)
