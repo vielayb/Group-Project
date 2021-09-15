@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <link rel="stylesheet" href="./assets/css/style.css" />
   <meta charset="UTF-8" />
@@ -11,10 +10,9 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>NeXtflix</title>
 </head>
-<body>
 
-</body>
-<!-- Page tittle goes here -->
+<body>
+  <!-- Page tittle goes here -->
   <header>
   <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel black z-depth-1">
@@ -35,6 +33,7 @@
   </header> 
 
  <!-- page description goes here -->
+  </header>
   <div class="container center-align">
     <section class="card-panel deep-purple lighten-1">
         <h2 class="white-text">
@@ -46,32 +45,21 @@
         </h5>
     </section>
   </div>
-
-<!-- Search buttons goes here -->
-  <div class="container">
-        <div class="searchBar">
-            <input id="inputMovie" type="text" class="white-text" class="form" placeholder="Search for a movie">
-            <div class="submitBtn">
-              <a class="waves-effect waves-light btn-small deep-purple lighten-1">Search</a>
-                </button>
-            </div>
-        </div>
-    </div>
-
+  <!-- Search Bar  -->
     <div class="container">
-        <div class="searchBar">
-            <input id="inputActor" type="text" class="white-text" class="form" placeholder="Search for an actor">
-            <div class="submitBtn">
+        <form class="submitBtn">
+            <input class="inputValue" type="text" placeholder="Search for a movie" style="color: white">
+            <div class="searchBar">
               <a class="waves-effect waves-light btn-small deep-purple lighten-1">Search</a>
-                </button> 
             </div>
-        </div>
-    </div>
-</div> 
+          </form>
+          
+      </div>
 
-<!-- Result's from search button start here -->
-<div class="container">
-<div class="row">
+
+ <!-- Result's from search button start here -->
+ <div class="container">
+ <div class="row">
 
   <div class="col s4">
     <!-- Movie tittle goes here -->
@@ -80,16 +68,20 @@
         <i class="material-icons">video_library</i>
         Movie Title
       </span>
+      <h3 class="movieName" style="color:black bold"> </h3>
     </div>
   </div>
 
 
   <div class="col s4">
-    <!-- Casting  goes here -->
+    <!-- Release date  goes here -->
     <div class="card-panel deep-purple lighten-1">
       <span class="white-text">
         <i class="material-icons">local_movies</i> Release Date
       </span>
+      <h3>
+        <span class="release" style="bold"></span>
+      </h3>
     </div>
   </div>
 
@@ -99,20 +91,25 @@
       <span class="white-text">
         <i class="material-icons">grade</i> Rating
       </span>
-    </div>
+      <h3>
+      <span class="rating" style="bold"></span>
+    </h3>
+  </div>
   </div>
 
-</div>
+ </div>
 
-<div class="row">
+ <div class="row">
   <div class="col s5">
     <!-- Movie trailer goes here -->
     <div class="card-panel deep-purple lighten-1">
       <span class="white-text">
         <i class="material-icons">movie_filter</i> Trailer
       </span>
-      <div class="video-container">
-        <iframe width="853" height="480" src="https://www.youtube.com/embed/DTBcGQWmQ1c" frameborder="0" allowfullscreen></iframe>
+      
+      <!-- YouTube Player  -->
+      <div id="movie-container" class="video-container">
+       <iframe id="trailer" width="853" height="480" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -123,13 +120,21 @@
       <span class="white-text">
         <i class="material-icons">assignment</i> Overview
       </span>
+      <p>
+      <span class="overview"></span>
+      </p>
     </div>
   </div>
 
+ </div>
 </div>
-</div>
+<!-- Linking JS -->
+<script src="./assets/js/script.js"></script>
 
-<footer class="page-footer purple darken-3">
+</body>
+
+<!-- footer -->
+ <footer class="page-footer purple darken-3">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
@@ -147,8 +152,6 @@
     © 2021 NeXtflix
     </div>
   </div>
-</footer>
+ </footer>
 
-<script src="./assets/js/script.js"></script>
-
-</body>
+;
