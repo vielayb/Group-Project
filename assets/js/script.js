@@ -15,16 +15,17 @@ function getMovie(event) {
     })
     .then(function(data) {
         console.log(data);
+
+      var name = data.results[0].title
+      movieName.innerHTML = name
+      var ratingScore = data.results[0].vote_average
+      rating.innerHTML = ratingScore
+      var overviewEl = data.results[0].overview
+      overview.innerHTML = overviewEl
+      var releaseDateEl = data.results[0].release_date
+      release.innerHTML = releaseDateEl
+
     });
-    var name = [0].title
-    movieName.innerHTML = name
-    var ratingScore = [0].vote_average
-    rating.innerHTML = ratingScore
-    var overviewEl = [0].overview
-    overview.innerHTML = overviewEl
-    var releaseDateEl = [0].release_date
-    release.innerHTML = releaseDateEl
-  
   }
 
 document.querySelector('.submitBtn').addEventListener('submit', getMovie)
