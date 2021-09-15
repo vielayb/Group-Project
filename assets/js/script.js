@@ -5,6 +5,7 @@ var rating = document.querySelector('.rating')
 var overview = document.querySelector('.overview')
 var release = document.querySelector('.release')
 var iframe = document.getElementById("trailer");
+
 function getMovie(event) {
   event.preventDefault();
   var search = inputValue.value
@@ -41,7 +42,7 @@ function getMovie(event) {
                             var trailerPath = infoObject.videos.results[0].key;
                             console.log(trailerPath);
 
-                            iframe.setAttribute('src', 'https://www.youtube.com/embed/' + trailerPath +'');
+                            iframe.setAttribute('src', 'https://www.youtube.com/embed/' + trailerPath + '');
                         });
     });
   }
