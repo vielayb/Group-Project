@@ -35,8 +35,10 @@ function getMovie(event) {
                         })
                         .then(function(infoObject) {
                             console.log(infoObject);
+
                             var trailerPath = infoObject.videos.results[0].key;
                             console.log(trailerPath);
+
                             iframe.setAttribute('src', 'https://www.youtube.com/embed/' + trailerPath + '');
                         });
     });

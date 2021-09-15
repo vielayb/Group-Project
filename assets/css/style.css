@@ -8,7 +8,12 @@ body {
     background-color: black;
 }
 
+main {
+    flex: 1 0 auto;
+  }
+
 .imbd {
     padding: 55px 0px 25px 55px;
 
 }
+
