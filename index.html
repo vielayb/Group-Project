@@ -5,19 +5,22 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Compiled and minified Materialize CSS -->
+  <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>NeXtflix</title>
 </head>
 <body>
+
+</body>
+<!-- Page tittle goes here -->
   <header>
-  
   <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel black z-depth-1">
       <div class="row valign-wrapper">
         <div class="col s2">
-          <img src="images/popcorn.jpeg" alt="neon popcorn sign" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <img src="images/popcorn.jpeg" alt="neon popcorn sign" class="circle responsive-img"> 
         </div>
         <div class="col s10">
           <span class="black-text">
@@ -29,9 +32,9 @@
       </div>
     </div>
   </div>
-  
-  </header>  
+  </header> 
 
+ <!-- page description goes here -->
   <div class="container center-align">
     <section class="card-panel deep-purple lighten-1">
         <h2 class="white-text">
@@ -39,11 +42,12 @@
         </h2>
         <h5>
             Now you can search movies and then look it up to see 
-            ratings, actors, or whatever.
+            ratings, actors, trailers and more.
         </h5>
     </section>
   </div>
 
+<!-- Search buttons goes here -->
   <div class="container">
         <div class="searchBar">
             <input id="inputMovie" type="text" class="white-text" class="form" placeholder="Search for a movie">
@@ -54,23 +58,97 @@
         </div>
     </div>
 
-    <div class="">
-        <img src="images/IMDb-Logo-Square.svg" alt="imdb logo" class="imbd">
-    </div>
-
     <div class="container">
         <div class="searchBar">
             <input id="inputActor" type="text" class="white-text" class="form" placeholder="Search for an actor">
             <div class="submitBtn">
               <a class="waves-effect waves-light btn-small deep-purple lighten-1">Search</a>
-                </button>
+                </button> 
             </div>
         </div>
     </div>
+</div> 
+
+<!-- Result's from search button start here -->
+<div class="container">
+<div class="row">
+
+  <div class="col s4">
+    <!-- Movie tittle goes here -->
+    <div class="card-panel deep-purple lighten-1">
+      <span class="white-text">
+        <i class="material-icons">video_library</i>
+        Movie Title
+      </span>
+    </div>
+  </div>
+
+
+  <div class="col s4">
+    <!-- Casting  goes here -->
+    <div class="card-panel deep-purple lighten-1">
+      <span class="white-text">
+        <i class="material-icons">local_movies</i> Release Date
+      </span>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <!-- Rating goes here -->
+    <div class="card-panel deep-purple lighten-1">
+      <span class="white-text">
+        <i class="material-icons">grade</i> Rating
+      </span>
+    </div>
+  </div>
+
 </div>
-<div id="movie-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/DTBcGQWmQ1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="row">
+  <div class="col s5">
+    <!-- Movie trailer goes here -->
+    <div class="card-panel deep-purple lighten-1">
+      <span class="white-text">
+        <i class="material-icons">movie_filter</i> Trailer
+      </span>
+      <div class="video-container">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/DTBcGQWmQ1c" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s5">
+    <!-- Overview goes here -->
+    <div class="card-panel deep-purple lighten-1">
+      <span class="white-text">
+        <i class="material-icons">assignment</i> Overview
+      </span>
+    </div>
+  </div>
+
 </div>
-<div></div>
+</div>
+
+<footer class="page-footer purple darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Made by</h5>
+        <p class="grey-text text-lighten-4">Vielay, Anthony, Kamila, Jacob</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Repository Link</h5>
+          <a class="grey-text text-lighten-3" href="https://github.com/vielayb/Group-Project">Github</a></li>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2021 NeXtflix
+    </div>
+  </div>
+</footer>
+
 <script src="./assets/js/script.js"></script>
+
 </body>
