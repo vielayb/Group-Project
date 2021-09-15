@@ -44,8 +44,6 @@ function getMovie(event) {
                             iframe.setAttribute('src', 'https://www.youtube.com/embed/' + trailerPath +'');
                         });
     });
-
-  
   }
 
 document.querySelector('.submitBtn').addEventListener('submit', getMovie)
