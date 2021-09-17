@@ -5,18 +5,15 @@ var rating = document.querySelector('.rating')
 var overview = document.querySelector('.overview')
 var release = document.querySelector('.release')
 var iframe = document.getElementById("trailer");
-
 function getMovie(event) {
   event.preventDefault();
   var search = inputValue.value
   fetch('https://api.themoviedb.org/3/search/movie?api_key=' + key + '&query=' + search + '')
-    
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
         console.log(data);
-
         var name = data.results[0].title
         movieName.innerHTML = name
         var ratingScore = data.results[0].vote_average
@@ -46,5 +43,4 @@ function getMovie(event) {
                         });
     });
   }
-
 document.querySelector('.submitBtn').addEventListener('submit', getMovie)
